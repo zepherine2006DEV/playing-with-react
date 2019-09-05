@@ -9,6 +9,17 @@ exports[`App includes Header 1`] = `
       Hello World
     </h1>
   </div>
+  <ul>
+    <li>
+      Home
+    </li>
+    <li>
+      Sign Up
+    </li>
+    <li>
+      Hire Us Now!
+    </li>
+  </ul>
   <button
     onClick={[Function]}
   >
@@ -25,4 +36,18 @@ exports[`exploring snapshot 1`] = `
     Hello World
   </h1>
 </div>
+`;
+
+exports[`navigation 1`] = `
+<ul>
+  <li>
+    Home
+  </li>
+  <li>
+    Sign Up
+  </li>
+  <li>
+    Hire Us Now!
+  </li>
+</ul>
 `;

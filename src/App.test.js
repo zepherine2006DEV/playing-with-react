@@ -4,6 +4,7 @@ import App from './App';
 import Header from './Header';
 import renderer from 'react-test-renderer';
 import { testNameToKey } from 'jest-snapshot/build/utils';
+import Navigation from './Navigation';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -27,6 +28,12 @@ test('exploring snapshot', () => {
 
 test('App includes Header', () => {
   const component = renderer.create(<App  />);
+  let result = component.toJSON();
+  expect(result).toMatchSnapshot();
+});
+
+test('navigation', () => {
+  const component = renderer.create(<Navigation />);
   let result = component.toJSON();
   expect(result).toMatchSnapshot();
 });

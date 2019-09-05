@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Header';
+import Navigation from './Navigation';
 
 function App() {
   function sayHi() {
@@ -10,6 +11,7 @@ function App() {
   return (
     <div>
       <Header />
+      <Navigation />
       <button onClick={sayHi}>Hi</button>
     </div>
   )
