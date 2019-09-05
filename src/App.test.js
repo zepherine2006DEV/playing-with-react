@@ -11,12 +11,6 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-// it('renders "Hello World!', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App />, div);
-//   expect(div.textContent).toBe('Hello World');
-// });
-
 describe("Header",() =>{
   it('Displays "Hello World', () => {
     const div =document.createElement('div');
@@ -28,6 +22,11 @@ describe("Header",() =>{
 test('exploring snapshot', () => {
   const component = renderer.create(<Header />);
   let result = component.toJSON();
-  console.log(result);
+  expect(result).toMatchSnapshot();
+});
+
+test('App includes Header', () => {
+  const component = renderer.create(<App  />);
+  let result = component.toJSON();
   expect(result).toMatchSnapshot();
 });
